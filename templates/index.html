@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📝 我的待办事项</h1>
+
+        <!-- 添加任务 -->
+        <form action="/add" method="post" class="task-form">
+            <input type="text" name="content" placeholder="输入新任务..." required>
+            <button type="submit">添加</button>
+        </form>
+
+        <!-- 查找任务 -->
+        <form action="/search" method="post" class="task-form">
+            <input type="text" name="keyword" placeholder="搜索任务..." required>
+            <button type="submit">查找</button>
+        </form>
+
+        <!-- 任务列表 -->
+        <ul class="task-list">
+            {% for task in tasks %}
+            <li>
+                <span class="seq">{{ task.seq }}.</span>
+                <span class="content">{{ task.content }}</span>
+
+                <!-- 修改任务 -->
+                <form action="/update/{{task.id}}" method="post" class="inline-form">
+                    <input type="text" name="content" placeholder="修改内容">
+                    <button type="submit">修改</button>
+                </form>
+
+                <!-- 删除任务 -->
+                <form action="/delete/{{task.id}}" method="post" class="inline-form">
+                    <button type="submit" class="delete-btn">删除</button>
+                </form>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

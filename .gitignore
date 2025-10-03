@@ -1,0 +1,10 @@
+# Python
+__pycache__/
+*.pyc
+
+# Database (旧的 SQLite 文件，不应提交)
+tasks.db
+todolist.db
+
+# Environment
+.env

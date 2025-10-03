@@ -1,0 +1,105 @@
+body {
+    font-family: "Microsoft YaHei", sans-serif;
+    background: #f4f6f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.task-form {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.task-form input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px 0 0 8px;
+    outline: none;
+}
+
+.task-form button {
+    padding: 10px 15px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.task-form button:hover {
+    background: #45a049;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-list li {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    background: #fafafa;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+.task-list li:hover {
+    transform: translateX(5px);
+    background: #f0f0f0;
+}
+
+.seq {
+    font-weight: bold;
+    color: #555;
+    margin-right: 10px;
+}
+
+.content {
+    flex: 1;
+}
+
+.inline-form {
+    margin-left: 10px;
+}
+
+.inline-form input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+}
+
+.inline-form button {
+    padding: 5px 10px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.inline-form button:hover {
+    opacity: 0.8;
+}
+
+.delete-btn {
+    background: #e74c3c;
+    color: white;
+}
