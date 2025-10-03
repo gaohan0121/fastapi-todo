@@ -4,7 +4,7 @@ services:
   - type: web
     name: fastapi-todo-app  # Web Service 的名称
     env: python
-    repo: <todolist2222>  # <-- 替换为你的 GitHub 仓库名称
+    repo: https://github.com/gaohan0121/fastapi-todo  # <-- 替换为你的 GitHub 仓库名称
     branch: main
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
